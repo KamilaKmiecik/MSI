@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?><process version="10.1.002">
+  <context>
+    <input/>
+    <output/>
+    <macros/>
+  </context>
+  <operator activated="true" class="process" compatibility="10.1.002" expanded="true" name="Process">
+    <parameter key="logverbosity" value="init"/>
+    <parameter key="logfile" value="//Local Repository/data/banana"/>
+    <parameter key="random_seed" value="2001"/>
+    <parameter key="send_mail" value="never"/>
+    <parameter key="notification_email" value=""/>
+    <parameter key="process_duration_for_mail" value="30"/>
+    <parameter key="encoding" value="SYSTEM"/>
+    <process expanded="true">
+      <operator activated="true" class="read_csv" compatibility="10.1.002" expanded="true" height="68" name="Read CSV" width="90" x="112" y="34">
+        <parameter key="csv_file" value="C:\Users\admin\Desktop\RapidMinerDane\spambase.csv"/>
+        <parameter key="column_separators" value=","/>
+        <parameter key="trim_lines" value="false"/>
+        <parameter key="use_quotes" value="true"/>
+        <parameter key="quotes_character" value="&quot;"/>
+        <parameter key="escape_character" value="\"/>
+        <parameter key="skip_comments" value="true"/>
+        <parameter key="comment_characters" value="#"/>
+        <parameter key="starting_row" value="1"/>
+        <parameter key="parse_numbers" value="true"/>
+        <parameter key="decimal_character" value="."/>
+        <parameter key="grouped_digits" value="false"/>
+        <parameter key="grouping_character" value=","/>
+        <parameter key="infinity_representation" value=""/>
+        <parameter key="date_format" value=""/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="encoding" value="windows-1250"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="Word_freq_make.true.real.attribute"/>
+          <parameter key="1" value="Word_freq_address.true.real.attribute"/>
+          <parameter key="2" value="Word_freq_all.true.real.attribute"/>
+          <parameter key="3" value="Word_freq_3d.true.real.attribute"/>
+          <parameter key="4" value="Word_freq_our.true.real.attribute"/>
+          <parameter key="5" value="Word_freq_over.true.real.attribute"/>
+          <parameter key="6" value="Word_freq_remove.true.real.attribute"/>
+          <parameter key="7" value="Word_freq_internet.true.real.attribute"/>
+          <parameter key="8" value="Word_freq_order.true.real.attribute"/>
+          <parameter key="9" value="Word_freq_mail.true.real.attribute"/>
+          <parameter key="10" value="Word_freq_receive.true.real.attribute"/>
+          <parameter key="11" value="Word_freq_will.true.real.attribute"/>
+          <parameter key="12" value="Word_freq_people.true.real.attribute"/>
+          <parameter key="13" value="Word_freq_report.true.real.attribute"/>
+          <parameter key="14" value="Word_freq_addresses.true.real.attribute"/>
+          <parameter key="15" value="Word_freq_free.true.real.attribute"/>
+          <parameter key="16" value="Word_freq_business.true.real.attribute"/>
+          <parameter key="17" value="Word_freq_email.true.real.attribute"/>
+          <parameter key="18" value="Word_freq_you.true.real.attribute"/>
+          <parameter key="19" value="Word_freq_credit.true.real.attribute"/>
+          <parameter key="20" value="Word_freq_your.true.real.attribute"/>
+          <parameter key="21" value="Word_freq_font.true.real.attribute"/>
+          <parameter key="22" value="Word_freq_000.true.real.attribute"/>
+          <parameter key="23" value="Word_freq_money.true.real.attribute"/>
+          <parameter key="24" value="Word_freq_hp.true.real.attribute"/>
+          <parameter key="25" value="Word_freq_hpl.true.real.attribute"/>
+          <parameter key="26" value="Word_freq_george.true.real.attribute"/>
+          <parameter key="27" value="Word_freq_650.true.real.attribute"/>
+          <parameter key="28" value="Word_freq_lab.true.real.attribute"/>
+          <parameter key="29" value="Word_freq_labs.true.real.attribute"/>
+          <parameter key="30" value="Word_freq_telnet.true.real.attribute"/>
+          <parameter key="31" value="Word_freq_857.true.real.attribute"/>
+          <parameter key="32" value="Word_freq_data.true.real.attribute"/>
+          <parameter key="33" value="Word_freq_415.true.real.attribute"/>
+          <parameter key="34" value="Word_freq_85.true.real.attribute"/>
+          <parameter key="35" value="Word_freq_technology.true.real.attribute"/>
+          <parameter key="36" value="Word_freq_1999.true.real.attribute"/>
+          <parameter key="37" value="Word_freq_parts.true.real.attribute"/>
+          <parameter key="38" value="Word_freq_pm.true.real.attribute"/>
+          <parameter key="39" value="Word_freq_direct.true.real.attribute"/>
+          <parameter key="40" value="Word_freq_cs.true.real.attribute"/>
+          <parameter key="41" value="Word_freq_meeting.true.real.attribute"/>
+          <parameter key="42" value="Word_freq_original.true.real.attribute"/>
+          <parameter key="43" value="Word_freq_project.true.real.attribute"/>
+          <parameter key="44" value="Word_freq_re.true.real.attribute"/>
+          <parameter key="45" value="Word_freq_edu.true.real.attribute"/>
+          <parameter key="46" value="Word_freq_table.true.real.attribute"/>
+          <parameter key="47" value="Word_freq_conference.true.real.attribute"/>
+          <parameter key="48" value="Char_freq1.true.real.attribute"/>
+          <parameter key="49" value="Char_freq2.true.real.attribute"/>
+          <parameter key="50" value="Char_freq3.true.real.attribute"/>
+          <parameter key="51" value="Char_freq4.true.real.attribute"/>
+          <parameter key="52" value="Char_freq5.true.real.attribute"/>
+          <parameter key="53" value="Char_freq6.true.real.attribute"/>
+          <parameter key="54" value="Capital_run_length_average.true.real.attribute"/>
+          <parameter key="55" value="Capital_run_length_longest.true.real.attribute"/>
+          <parameter key="56" value="Capital_run_length_total.true.real.attribute"/>
+          <parameter key="57" value="Spam.true.integer.attribute"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="false"/>
+      </operator>
+      <operator activated="true" class="concurrency:loop_parameters" compatibility="10.1.002" expanded="true" height="82" name="Loop Parameters" width="90" x="380" y="34">
+        <list key="parameters">
+          <parameter key="k-NN (2).k" value="[1.0;100.0;10;linear]"/>
+        </list>
+        <parameter key="error_handling" value="fail on error"/>
+        <parameter key="log_performance" value="true"/>
+        <parameter key="log_all_criteria" value="false"/>
+        <parameter key="synchronize" value="false"/>
+        <parameter key="enable_parallel_execution" value="true"/>
+        <process expanded="true">
+          <operator activated="true" class="blending:set_role" compatibility="10.1.002" expanded="true" height="82" name="Set Role (2)" width="90" x="246" y="34">
+            <list key="set_roles">
+              <parameter key="Type" value="label"/>
+            </list>
+          </operator>
+          <operator activated="true" class="concurrency:cross_validation" compatibility="10.1.002" expanded="true" height="145" name="Cross Validation (2)" width="90" x="447" y="34">
+            <parameter key="split_on_batch_attribute" value="false"/>
+            <parameter key="leave_one_out" value="false"/>
+            <parameter key="number_of_folds" value="20"/>
+            <parameter key="sampling_type" value="automatic"/>
+            <parameter key="use_local_random_seed" value="false"/>
+            <parameter key="local_random_seed" value="1992"/>
+            <parameter key="enable_parallel_execution" value="true"/>
+            <process expanded="true">
+              <operator activated="true" class="normalize" compatibility="10.1.002" expanded="true" height="103" name="Normalize" width="90" x="112" y="34">
+                <parameter key="return_preprocessing_model" value="false"/>
+                <parameter key="attribute_filter_type" value="all"/>
+                <parameter key="attribute" value=""/>
+                <parameter key="attributes" value=""/>
+                <parameter key="use_except_expression" value="false"/>
+                <parameter key="value_type" value="numeric"/>
+                <parameter key="use_value_type_exception" value="false"/>
+                <parameter key="except_value_type" value="real"/>
+                <parameter key="block_type" value="value_series"/>
+                <parameter key="use_block_type_exception" value="false"/>
+                <parameter key="except_block_type" value="value_series_end"/>
+                <parameter key="invert_selection" value="false"/>
+                <parameter key="include_special_attributes" value="false"/>
+                <parameter key="method" value="Z-transformation"/>
+                <parameter key="min" value="0.0"/>
+                <parameter key="max" value="1.0"/>
+                <parameter key="allow_negative_values" value="false"/>
+              </operator>
+              <operator activated="true" class="k_nn" compatibility="10.1.002" expanded="true" height="82" name="k-NN (2)" width="90" x="313" y="34">
+                <parameter key="k" value="50"/>
+                <parameter key="weighted_vote" value="true"/>
+                <parameter key="measure_types" value="MixedMeasures"/>
+                <parameter key="mixed_measure" value="MixedEuclideanDistance"/>
+                <parameter key="nominal_measure" value="NominalDistance"/>
+                <parameter key="numerical_measure" value="EuclideanDistance"/>
+                <parameter key="divergence" value="GeneralizedIDivergence"/>
+                <parameter key="kernel_type" value="radial"/>
+                <parameter key="kernel_gamma" value="1.0"/>
+                <parameter key="kernel_sigma1" value="1.0"/>
+                <parameter key="kernel_sigma2" value="0.0"/>
+                <parameter key="kernel_sigma3" value="2.0"/>
+                <parameter key="kernel_degree" value="3.0"/>
+                <parameter key="kernel_shift" value="1.0"/>
+                <parameter key="kernel_a" value="1.0"/>
+                <parameter key="kernel_b" value="0.0"/>
+              </operator>
+              <operator activated="true" class="group_models" compatibility="10.1.002" expanded="true" height="103" name="Group Models" width="90" x="313" y="187"/>
+              <connect from_port="training set" to_op="Normalize" to_port="example set input"/>
+              <connect from_op="Normalize" from_port="example set output" to_op="k-NN (2)" to_port="training set"/>
+              <connect from_op="Normalize" from_port="preprocessing model" to_op="Group Models" to_port="models in 1"/>
+              <connect from_op="k-NN (2)" from_port="model" to_op="Group Models" to_port="models in 2"/>
+              <connect from_op="Group Models" from_port="model out" to_port="model"/>
+              <portSpacing port="source_training set" spacing="0"/>
+              <portSpacing port="sink_model" spacing="0"/>
+              <portSpacing port="sink_through 1" spacing="0"/>
+            </process>
+            <process expanded="true">
+              <operator activated="true" class="apply_model" compatibility="10.1.002" expanded="true" height="82" name="Apply Model (2)" width="90" x="112" y="34">
+                <list key="application_parameters"/>
+              </operator>
+              <operator activated="true" class="performance_classification" compatibility="10.1.002" expanded="true" height="82" name="Performance (2)" width="90" x="313" y="85">
+                <parameter key="main_criterion" value="accuracy"/>
+                <parameter key="accuracy" value="false"/>
+                <parameter key="classification_error" value="true"/>
+                <parameter key="kappa" value="false"/>
+                <parameter key="weighted_mean_recall" value="false"/>
+                <parameter key="weighted_mean_precision" value="false"/>
+                <parameter key="spearman_rho" value="false"/>
+                <parameter key="kendall_tau" value="false"/>
+                <parameter key="absolute_error" value="false"/>
+                <parameter key="relative_error" value="false"/>
+                <parameter key="relative_error_lenient" value="false"/>
+                <parameter key="relative_error_strict" value="false"/>
+                <parameter key="normalized_absolute_error" value="false"/>
+                <parameter key="root_mean_squared_error" value="false"/>
+                <parameter key="root_relative_squared_error" value="false"/>
+                <parameter key="squared_error" value="false"/>
+                <parameter key="correlation" value="false"/>
+                <parameter key="squared_correlation" value="false"/>
+                <parameter key="cross-entropy" value="false"/>
+                <parameter key="margin" value="false"/>
+                <parameter key="soft_margin_loss" value="false"/>
+                <parameter key="logistic_loss" value="false"/>
+                <parameter key="skip_undefined_labels" value="true"/>
+                <parameter key="use_example_weights" value="true"/>
+                <list key="class_weights"/>
+              </operator>
+              <connect from_port="model" to_op="Apply Model (2)" to_port="model"/>
+              <connect from_port="test set" to_op="Apply Model (2)" to_port="unlabelled data"/>
+              <connect from_op="Apply Model (2)" from_port="labelled data" to_op="Performance (2)" to_port="labelled data"/>
+              <connect from_op="Performance (2)" from_port="performance" to_port="performance 1"/>
+              <connect from_op="Performance (2)" from_port="example set" to_port="test set results"/>
+              <portSpacing port="source_model" spacing="0"/>
+              <portSpacing port="source_test set" spacing="0"/>
+              <portSpacing port="source_through 1" spacing="0"/>
+              <portSpacing port="sink_test set results" spacing="0"/>
+              <portSpacing port="sink_performance 1" spacing="0"/>
+              <portSpacing port="sink_performance 2" spacing="0"/>
+            </process>
+          </operator>
+          <connect from_port="input 1" to_op="Set Role (2)" to_port="example set input"/>
+          <connect from_op="Set Role (2)" from_port="example set output" to_op="Cross Validation (2)" to_port="example set"/>
+          <connect from_op="Cross Validation (2)" from_port="performance 1" to_port="performance"/>
+          <portSpacing port="source_input 1" spacing="0"/>
+          <portSpacing port="source_input 2" spacing="0"/>
+          <portSpacing port="sink_performance" spacing="0"/>
+          <portSpacing port="sink_output 1" spacing="0"/>
+          <portSpacing port="sink_output 2" spacing="0"/>
+        </process>
+      </operator>
+      <connect from_op="Read CSV" from_port="output" to_op="Loop Parameters" to_port="input 1"/>
+      <connect from_op="Loop Parameters" from_port="output 1" to_port="result 1"/>
+      <portSpacing port="source_input 1" spacing="0"/>
+      <portSpacing port="sink_result 1" spacing="0"/>
+      <portSpacing port="sink_result 2" spacing="0"/>
+    </process>
+  </operator>
+</process>
